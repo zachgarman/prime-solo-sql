@@ -43,6 +43,6 @@ VALUES
 
 -- 9. The bank is losing money in Miami and Phoenix and needs to unload low transaction customers: Delete users that reside in miami OR phoenix and have completed fewer than 5 transactions.
 DELETE FROM syntax_practice
-WHERE city = 'miami'
-OR city = 'phoenix'
+WHERE (city = 'miami'
+OR city = 'phoenix')
 AND transactions_completed < 5;
